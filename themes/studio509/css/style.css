@@ -1,0 +1,111 @@
+.blockOverlay {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.75);
+}
+.blockLink {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+}
+.animate {
+  transition: all ease 0.6s;
+}
+body {
+  font-family: Roboto, sans-serif;
+  font-size: 14pt;
+  color: #111;
+}
+a {
+  text-decoration: none;
+}
+ul,
+li,
+ul.menu {
+  margin: 0;
+  padding: 0;
+}
+img {
+  max-width: 100%;
+  height: auto!important;
+}
+nav.tabs li a {
+  color: #000;
+  display: block;
+  background: #ccc;
+  border-radius: 4px 4px 0 0;
+  padding: 10px;
+}
+#block-navigationprincipale {
+  float: right;
+  width: inherit;
+}
+.block-superfish {
+  width: auto!important;
+}
+ul.sf-menu > li a,
+ul.sf-menu > li span.nolink {
+  padding: 5px 0.5em;
+  color: #fff;
+  text-transform: uppercase;
+}
+ul.sf-menu .sf-with-ul {
+  padding-right: 26px;
+}
+ul.sf-menu ul {
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+}
+.site-footer_bottom .menu li {
+  display: inline-flex;
+}
+.site-footer_bottom .menu li:after {
+  display: inline-flex;
+  margin: 0 0.25em;
+  content: "|";
+}
+.site-footer_bottom .menu li:last-child:after {
+  display: none;
+}
+.site-footer_bottom .menu li a {
+  font-size: 0.8em;
+}
+#block-comnstay-branding {
+  float: left;
+}
+.breadcrumb {
+  font-size: 0.9em;
+  margin: 1em 0;
+}
+.article {
+  position: relative;
+}
+.article .readMore a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  text-indent: -9999px;
+  overflow: hidden;
+}

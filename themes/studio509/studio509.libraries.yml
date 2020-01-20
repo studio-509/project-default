@@ -1,0 +1,14 @@
+global-styling:
+  version: 1.0
+  css:
+    base:
+      css/bootstrap.css: {}
+    layout:
+      css/glyphicons.css: {}
+      css/layout.css: {}
+    theme:
+      css/style.css: {}
+      css/editor.css: {}
+  js :
+    js/popper.js: {}
+    js/bootstrap.js: {}

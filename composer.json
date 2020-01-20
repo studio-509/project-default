@@ -1,0 +1,52 @@
+{
+  "name": "studio509/project-default",
+  "description": "Project default with modules installed.",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "drupal/core": "^8",
+    "composer/installers": "^1.2.0",
+    "cweagans/composer-patches": "^1.6.4",
+    "drupal/composerize": "1.x-dev",
+    "drupal-composer/drupal-scaffold": "^2.4",
+    "oomphinc/composer-installers-extender": "^1.1",
+    "wikimedia/composer-merge-plugin": "^1.4.1",
+    "drupal/entity_reference_revisions" : "^1.7",
+    "drupal/pathauto": "^1.6",
+    "drupal/simple_sitemap": "^3.5",
+    "drupal/redirect": "^1.5",
+    "drupal/paragraphs": "^1.10",
+    "drupal/metatag": "^1.11",
+    "drupal/eu_cookie_compliance": "^1.8",
+    "drupal/token": "^1.6",
+    "drupal/admin_toolbar": "^2.0"
+  },
+  "require-dev": {
+    "drupal/console": "^1.0.2",
+    "drush/drush": "^9.0.0"
+  },
+  "extra": {
+    "_readme": [
+        "By default Drupal loads the autoloader from ./vendor/autoload.php.",
+        "To change the autoloader you can edit ./autoload.php.",
+        "This file specifies the packages.drupal.org repository.",
+        "You can read more about this composer repository at:",
+        "https://www.drupal.org/node/2718229"
+    ],
+    "enable-patching": true,
+    "installer-types": ["bower-asset", "npm-asset"],
+    "installer-paths": {
+        "core": ["type:drupal-core"],
+        "libraries/{$name}": ["type:drupal-library"],
+        "modules/contrib/{$name}": ["type:drupal-module"],
+        "profiles/contrib/{$name}": ["type:drupal-profile"],
+        "themes/contrib/{$name}": ["type:drupal-theme"],
+        "drush/{$name}": ["type:drupal-drush"],
+        "modules/custom/{$name}": ["type:drupal-custom-module"],
+        "themes/custom/{$name}": ["type:drupal-custom-theme"]
+    },
+    "patches": {}
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}

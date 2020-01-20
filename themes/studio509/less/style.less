@@ -1,0 +1,195 @@
+
+@import 'variables.less';
+
+// ------------------------------------------------------------------------
+// DEFAUT
+// ------------------------------------------------------------------------
+ 
+
+body {
+	font-family: @font01;
+	font-size: @fontsizeTXT;
+  color:@color01;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+li,
+ul.menu {
+	margin: 0;
+	padding: 0;
+}
+
+
+img {
+	max-width: 100%;
+	height: auto!important;
+}
+
+// ------------------------------------------------------------------------
+// ADMINISTRATION
+// ------------------------------------------------------------------------
+
+nav.tabs {}
+nav.tabs li {
+}
+
+nav.tabs li a {
+	color: #000;
+	display: block;
+	background: #ccc;
+	border-radius: 4px 4px 0 0;
+	padding: 10px;
+}
+
+// ------------------------------- Menus --------------------------------- 
+
+// Menu principal SF
+#block-navigationprincipale {
+	float: right;
+	width: inherit;
+}
+.block-superfish {
+	width: auto!important;
+}
+
+ul.sf-menu {
+  
+  > li  {
+    a,
+    span.nolink {
+      padding: 5px 0.5em;
+	    color: #fff;
+	    text-transform: uppercase;
+    }
+  }
+  
+  .sf-with-ul {
+    padding-right: 26px;
+  }
+  
+  ul {
+    background: rgba(255,255,255,0.5);
+    box-shadow: none;
+    a {
+      &:hover {}
+    }
+  }
+}
+
+
+
+// Menu footer 
+
+.site-footer_bottom {
+  .menu {
+    li {
+      display: inline-flex;
+      &:after {
+        display: inline-flex;
+        margin: 0 0.25em;
+        content: "|";
+      }
+      &:last-child:after {
+        display: none;
+      }
+      a {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+// ------------------------------------------------------------------------
+// STUCTURE
+// ------------------------------------------------------------------------
+
+
+// ------------------------------- Header --------------------------------- 
+
+#block-comnstay-branding {
+	float: left;
+}
+
+// ---------------------------- Main-wrapper ------------------------------ 
+
+.breadcrumb {
+	font-size: 0.9em;
+	margin: 1em 0;
+}
+
+
+// ------------------------------ Triptych -------------------------------- 
+
+// --------------------------- Footer columns ----------------------------- 
+
+// ------------------------------- Footer --------------------------------- 
+
+
+// ------------------------------------------------------------------------
+// TYPE DE CONTENU
+// ------------------------------------------------------------------------
+
+// ------------------------------------------------------------------------
+// Type de contenu
+// ------------------------------------------------------------------------
+
+// Node 
+
+.article {
+	position: relative;
+  .readMore {
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      text-indent: -9999px;
+      overflow: hidden;
+    }
+  }
+}
+
+// View 
+
+.articleArticle {}
+.articleArticle .content {}
+.articleArticle .miniature {}
+
+
+// ------------------------------------------------------------------------
+// Type de contenu
+// ------------------------------------------------------------------------
+
+// Node 
+
+
+// View 
+
+
+
+// ------------------------------------------------------------------------ 
+// RESPONSIVE
+// ------------------------------------------------------------------------ 
+
+// Smartphone 
+
+@media all and (max-width:@responsiveSmart) {}
+
+// Tablette
+
+@media all and (min-width:@responsiveTablet) {}
+
+// Desk
+
+@media all and (min-width:@responsiveDesk ) {}
+
+// Full screen 
+
+@media all and (min-width:@responsiveLarge) {}
+

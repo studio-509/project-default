@@ -1,0 +1,59 @@
+// Variable 
+
+// Couleur 
+
+@color01 : #111; // Couleur : 
+@color02 : #333; // Couleur : 
+@color03 : #555; // Couleur : 
+@color04 : #777; // Couleur : 
+@color05 : #999; // Couleur : 
+@color06 : #efefef; // Couleur : 
+
+// Fonts 
+
+@font01 : Roboto, sans-serif; // Font01 
+@font02 : arial; // Font01 
+
+@fontsizeTXT : 14pt;
+@fontsizeSTT : 1.5em; 
+@fontsizeTT : 2.5em;
+@fontsizeTTsec : 4em;
+
+// Largeur contenur
+
+@containerSmall: 1000px!important;
+@container:1170px;
+
+// Break 
+
+@responsiveSmart: 767px;
+@responsiveTablet: 768px;
+@responsiveDesk : 1024px;
+@responsiveLarge : 1171px;
+
+// Class general
+
+.blockOverlay {
+  position:absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.overlay {
+  .blockOverlay;
+  background: rgba(0,0,0,0.75);
+}
+
+.blockLink {
+  .blockOverlay;
+  text-indent: -9999px;
+}
+
+.animate {
+  transition: all ease 0.6s;
+}
+

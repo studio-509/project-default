@@ -1,0 +1,34 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{% block paragraph %}
+  <section {{ attributes.addClass(classes) }}>
+
+    {% block content %}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-sm-6 col-md-3 my-2">
+          {{ content.field_first_textarea|field_value}}
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 my-2">
+          {{ content.field_field_second_textarea|field_value}}
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 my-2">
+          {{ content.field_field_third_textarea|field_value}}
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 my-2">
+          {{ content.field_field_four_textarea|field_value}}
+        </div>
+      </div>
+    </div>
+
+    {% endblock %}
+  </section>
+{% endblock paragraph %}

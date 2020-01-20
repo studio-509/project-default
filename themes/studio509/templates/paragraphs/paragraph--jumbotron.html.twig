@@ -1,0 +1,24 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+{% block paragraph %}
+  <section {{ attributes.addClass(classes) }}>
+
+    {% block content %}
+
+    <div class="container">
+      <div class="jumbotron" style="background-image:url('{{ content.field_background|field_value}}');">
+        <h2>{{ content.field_titre_du_paragraphe|field_value}}</h2>
+        {{ content.field_first_textarea|field_value}}
+        {{ content.field_url|field_value}}
+      </div>
+    </div>
+
+    {% endblock %}
+  </section>
+{% endblock paragraph %}
