@@ -179,10 +179,10 @@
  * @endcode
  */
  $databases['default']['default'] = array (
-   'database' => '',
-   'username' => '',
-   'password' => '',
-   'prefix' => '',
+   'database' => 'sqdsq',
+   'username' => 'sqdqs',
+   'password' => 'sqdqs',
+   'prefix' => 'sqdqs',
    'host' => '',
    'port' => '',
    'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
