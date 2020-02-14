@@ -1,4 +1,4 @@
-@import 'variables.less';
+@import 'variables';
 
 // ------------------------------------------------------------------------
 // EDITOR
@@ -22,7 +22,8 @@ ul,
 
 
 h1.page-title {
-	color: #333;
+	color: @colorAlpha;
+  font-family: @fontCustom;
 }
 
 h2,
@@ -44,7 +45,7 @@ span.color01,
 .cke_editable h2.color01,
 .cke_editable h3.color01,
 .cke_editable span.color01 {
-	color: #0F58D9;
+	color: @colorAlpha;
 }
 
 .node__content h3,
@@ -55,5 +56,5 @@ span.color02,
 .cke_editable h2.color02,
 .cke_editable h3.color02,
 .cke_editable span.color02 {
-	color: #D40C10;
+	color: @colorBeta;
 }

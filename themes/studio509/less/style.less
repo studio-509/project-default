@@ -1,5 +1,4 @@
-
-@import 'variables.less';
+@import 'variables';
 
 // ------------------------------------------------------------------------
 // DEFAUT
@@ -7,13 +6,17 @@
  
 
 body {
-	font-family: @font01;
+	font-family: @font;
 	font-size: @fontsizeTXT;
-  color:@color01;
+  color:@colorAlpha;
 }
 
 a {
 	text-decoration: none;
+  color:@colorAlpha;
+  &:hover {
+    color:@colorBeta;
+  }
 }
 
 ul,
@@ -23,12 +26,44 @@ ul.menu {
 	padding: 0;
 }
 
-
 img {
 	max-width: 100%;
 	height: auto!important;
 }
 
+figure {
+  margin:0;
+}
+
+.sectionTitle {
+  text-transform:uppercase;
+  text-align: center;
+  font-weight: 300;
+  font-size: @fontsizeSTT;
+  margin-bottom: 3rem;
+}
+
+.iconSVG {
+  display:block;
+  width: 32px;
+  height: 32px;
+}
+
+.blockButton {
+  display: block;
+}
+
+.button {
+  border-radius:4px;
+  border: 0;
+  padding: 0.75rem 2rem;
+  font-size: 0.9rem;
+}
+
+
+.button--primary {
+  .btnBeta;
+}
 // ------------------------------------------------------------------------
 // ADMINISTRATION
 // ------------------------------------------------------------------------
@@ -45,25 +80,60 @@ nav.tabs li a {
 	padding: 10px;
 }
 
+
+.eu-cookie-compliance-banner {
+  background: rgba(0,0,0,0.75);
+  font-size: 0.8rem;
+  h2 {
+    font-size:0.9rem;
+    font-weight: 500;
+  }
+}
+
 // ------------------------------- Menus --------------------------------- 
 
-// Menu principal SF
-#block-navigationprincipale {
-	float: right;
-	width: inherit;
-}
-.block-superfish {
-	width: auto!important;
+
+
+
+// ------------------------------------------------------------------------
+// STUCTURE
+// ------------------------------------------------------------------------
+
+
+// ------------------------------- Header --------------------------------- 
+
+.block-system-branding-block {
+  max-width:160px;
+  margin: 1rem 0;
+  .site-logo {
+    display: block;
+    width: 100%;
+    img {
+      width:100px;
+    }
+  }
 }
 
+// Menu principal SF
+
 ul.sf-menu {
-  
+  width: 100%;
   > li  {
     a,
     span.nolink {
-      padding: 5px 0.5em;
-	    color: #fff;
+      padding: 0.5em 0.75rem;
+	    color: @colorAlpha;
 	    text-transform: uppercase;
+      background: none;
+    }
+    
+    &.active-trail,
+    &:hover {
+      background:@colorBeta;
+      a,
+      span {        
+        color:@colorLight;
+      }
     }
   }
   
@@ -80,14 +150,64 @@ ul.sf-menu {
   }
 }
 
+.view-slides {
+  position:relative;
+  .widget_pager {
+    width:100%;
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    li {
+      display: block;
+      margin: 0 0.25rem;
+      width: 20px;
+      height: 20px;
+      text-indent: -1000px;
+      overflow: hidden;
+      border: 2px solid #fff;
+      background:@colorAlpha;
+      border-radius: 0;
+      cursor: pointer;
+      &.active,
+      &:hover {
+        background:@colorBeta;
+      }
+    }
+  }
+}
 
+// ---------------------------- Main-wrapper ------------------------------ 
+
+.breadcrumb {
+	font-size: 0.8em;
+	margin: 1em 0;
+  padding: 0;
+  background: none;
+}
+
+
+// ------------------------------ Triptych -------------------------------- 
+
+// --------------------------- Footer columns ----------------------------- 
+
+// ------------------------------- Footer --------------------------------- 
+
+#footer {
+  font-size:0.9rem;
+}
 
 // Menu footer 
 
 .site-footer_bottom {
-  .menu {
+  .navbar-nav {
+    flex-direction: row;
+    margin: 0;
     li {
       display: inline-flex;
+      align-items: center;
       &:after {
         display: inline-flex;
         margin: 0 0.25em;
@@ -103,31 +223,12 @@ ul.sf-menu {
   }
 }
 
-// ------------------------------------------------------------------------
-// STUCTURE
-// ------------------------------------------------------------------------
-
-
-// ------------------------------- Header --------------------------------- 
-
-#block-comnstay-branding {
-	float: left;
+.socialMedia {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  .iconSVG {}
 }
-
-// ---------------------------- Main-wrapper ------------------------------ 
-
-.breadcrumb {
-	font-size: 0.9em;
-	margin: 1em 0;
-}
-
-
-// ------------------------------ Triptych -------------------------------- 
-
-// --------------------------- Footer columns ----------------------------- 
-
-// ------------------------------- Footer --------------------------------- 
-
 
 // ------------------------------------------------------------------------
 // TYPE DE CONTENU
@@ -172,6 +273,27 @@ ul.sf-menu {
 // View 
 
 
+// ------------------------------------------------------------------------ 
+// MAINTENANCE
+// ------------------------------------------------------------------------ 
+
+.maintenance-page {
+  .layout-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    .content {
+      max-width:600px;
+      text-align: center;
+    }
+  }
+  .logo {
+    width:170px;
+    margin: 0 auto 2rem auto;
+    display: block;
+  }
+}
 
 // ------------------------------------------------------------------------ 
 // RESPONSIVE

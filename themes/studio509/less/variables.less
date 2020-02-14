@@ -2,17 +2,18 @@
 
 // Couleur 
 
-@color01 : #111; // Couleur : 
-@color02 : #333; // Couleur : 
-@color03 : #555; // Couleur : 
-@color04 : #777; // Couleur : 
-@color05 : #999; // Couleur : 
-@color06 : #efefef; // Couleur : 
+@colorAlpha :     #111; // Couleur : 
+@colorBeta :      #333; // Couleur : 
+@colorGamma :     #555; // Couleur : 
+@colorDelta :     #777; // Couleur : 
+
+@colorLight:      #fff;
+@colorDark:       #000;
 
 // Fonts 
 
-@font01 : Roboto, sans-serif; // Font01 
-@font02 : arial; // Font01 
+@font : Roboto, sans-serif; // Font01 
+@fontCustom : arial; // Font01 
 
 @fontsizeTXT : 14pt;
 @fontsizeSTT : 1.5em; 
@@ -26,14 +27,32 @@
 
 // Break 
 
-@responsiveSmart: 767px;
-@responsiveTablet: 768px;
-@responsiveDesk : 1024px;
-@responsiveLarge : 1171px;
+@responsiveSmart :     767px;
+@responsiveTablet :    768px;
+@responsiveDesk :   1024px;
+@responsiveLarge :  1171px;
 
 // Class general
 
-.blockOverlay {
+.btnAlpha() {
+  background:@colorAlpha;
+  color: @colorBeta;
+  &:hover {
+    background:@colorBeta;
+    color:@colorAlpha;
+  }
+}
+
+.btnBeta() {
+  background:@colorBeta;
+  color: @colorAlpha;
+  &:hover {
+    background:@colorAlpha;
+    color:@colorBeta;
+  }
+}
+
+.blockOverlay() {
   position:absolute;
   display: block;
   height: 100%;
@@ -43,17 +62,27 @@
   overflow: hidden;
 }
 
-.overlay {
+.overlay() {
   .blockOverlay;
   background: rgba(0,0,0,0.75);
 }
 
-.blockLink {
+.blockLink() {
   .blockOverlay;
   text-indent: -9999px;
 }
 
-.animate {
+.animate() {
   transition: all ease 0.6s;
 }
+
+.grayscale() {
+  filter: grayscale(100%);
+  .animate;
+  &:hover {
+    filter: grayscale(0%);
+    .animate;
+  }
+}
+
 

@@ -5,10 +5,11 @@ global-styling:
       css/bootstrap.css: {}
     layout:
       css/glyphicons.css: {}
-      css/layout.css: {}
     theme:
       css/style.css: {}
       css/editor.css: {}
+      css/paragraphs.css: {}
   js :
     js/popper.js: {}
     js/bootstrap.js: {}
+    js/theme.js: {}
