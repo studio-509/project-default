@@ -1,0 +1,45 @@
+@import 'variables';
+
+#hamburger-block{
+  #hamburger-toggle{
+    .hamburger{
+      .hamburger-inner{
+        background-color: @colorDark;
+        &:after{
+          background-color: @colorDark;
+        }
+        &:before{
+          background-color: @colorDark;
+        }
+      }
+    }
+  }
+}
+/* !!! Cette DIV est sortie de #hamburger-block par le script JS de la librairie !!! */
+#hamburger-menu{
+  .hamburger{
+    align-self: flex-end;
+    .hamburger-inner{
+      &:after{}
+      &:before{}
+    }
+  }
+  ul{
+    li{
+      a{}
+      span{}
+    }
+  }
+}
+
+@media all and (max-width:767px) {
+	#block-navigationprincipale-2{
+		display: none;
+	}
+}
+
+@media all and (min-width:768px) {
+	#hamburger-block{
+		display: none;
+	}
+}

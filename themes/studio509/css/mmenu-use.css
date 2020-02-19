@@ -1,0 +1,13 @@
+#hamburger-block #hamburger-toggle .hamburger .hamburger-inner {
+  background-color: #ffffff;
+}
+#hamburger-block #hamburger-toggle .hamburger .hamburger-inner:after {
+  background-color: #ffffff;
+}
+#hamburger-block #hamburger-toggle .hamburger .hamburger-inner:before {
+  background-color: #ffffff;
+}
+/* !!! Cette DIV est sortie de #hamburger-block par le script JS de la librairie !!! */
+#hamburger-menu .hamburger {
+  align-self: flex-end;
+}

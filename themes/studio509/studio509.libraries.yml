@@ -6,10 +6,15 @@ global-styling:
     layout:
       css/glyphicons.css: {}
     theme:
+      css/mmenu.css: {}
+      css/mmenu-use.css: {}
+      css/hamburger-button.css: {}
+      css/paragraphs.css: {}
       css/style.css: {}
       css/editor.css: {}
-      css/paragraphs.css: {}
   js :
     js/popper.js: {}
+    js/mmenu.js: {}
+    js/mmenu-use.js: {}
     js/bootstrap.js: {}
     js/theme.js: {}
