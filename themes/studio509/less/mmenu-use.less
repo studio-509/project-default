@@ -17,6 +17,9 @@
 }
 /* !!! Cette DIV est sortie de #hamburger-block par le script JS de la librairie !!! */
 #hamburger-menu{
+  &:not(.mm-menu_opened) .hamburger{
+    display: none;
+  }
   .hamburger{
     align-self: flex-end;
     .hamburger-inner{
